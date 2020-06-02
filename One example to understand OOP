@@ -1,0 +1,84 @@
+'''
+Here goes a python file to show how OOP works.
+First,we creat a nornal class named Animal.In fact, Parent class are usually used to describe common features.
+Animals are a common feature of cats and dogs.
+We define a function named 'run' and use this function to print animals' running action.
+Second,it's time to create more animal class, just as i created, Duck and Cat class are Animal's subclass.
+We don't have to define any functions in Duck and Cat class.Just pass.
+Instantiation is essential while Object Oriented Programming.
+To describe OOP more clearly.I will upload another file to express.
+Now just go instantiation and call function.
+We instantiate a duck named Donald and a cat named Hellokitty.
+Duck class and Cat class are empty.But it still works.
+Donald and Hellokitty can run , Because they are indeed animals.
+But more important thing is that Duck class and Cat class are Animal's subclass.
+So they inherited from all Animals' features and they can run .
+
+'''
+
+
+class Animal():
+    def run(self):
+        print('The animal is running')
+    def func(self,a,b):
+        print(a,b)
+
+class Duck(Animal):
+    pass
+
+class Cat(Animal):
+    pass
+
+Donald = Duck()
+Hellokitty = Cat()
+Donald.run()
+Hellokitty.run()
+'''
+Ouput:
+The animal is running
+The animal is running
+'''
+
+
+
+
+
+'''
+If we define another run in Cat class and Duck class.
+Something interesting will happen.
+'''
+
+class Animal():
+    def run(self):
+        print('The animal is running')
+    def func(self,a,b):
+        print(a,b)
+
+class Duck(Animal):
+    def run(self):
+        print('The duck is running')
+
+class Cat(Animal):
+    def run(self):
+        print('The cat is running')
+
+
+Donald = Duck()
+Hellokitty = Cat()
+Donald.run()
+Hellokitty.run()
+
+'''
+Output:
+The duck is running
+The cat is running
+
+If we redefine a function in subclass.
+This function will override the function of the same name in the parent class.
+
+We can imagine this as an up-down struture.Upper class usually contains subclass's common functions 
+If something changed in subclss, just redefine a function and override it.
+
+
+
+'''
